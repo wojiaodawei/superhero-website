@@ -1,0 +1,519 @@
+@font-face {
+    font-family: "SF Comic Script";
+    src: url("fonts/SF Comic Script.ttf");
+}
+@font-face {
+    font-family: "SF Comic Script Condensed";
+    src: url("fonts/SF Comic Script Condensed.ttf");
+}
+
+/************************ Squelette ************************/
+
+html{
+	font-size:calc(1.2vh+1.2vw);
+	/*background: white url('img/bg.jpg') no-repeat center fixed; 
+	-ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 100% 100%;*/
+	font-family: "SF Comic Script", serif;
+	background-color:#003f5e;
+}
+
+body{
+	font-size:1em;
+	max-width: 70em;
+	margin: auto;
+	margin-top:1.5%;
+	margin-bottom:1.5%;
+	border: 0.25em double #002a3e;
+}
+
+a{
+	text-decoration: none;
+	color:red;
+	outline-color: transparent; /*évite d'avoir un cadre généré par le navigateur non souhaité lors d'un clic sur un lien*/
+}
+
+a:hover{
+	transition: all 0.5s ease-out;
+}
+
+ul{
+	border: 0.1em solid #002a3e;
+	display:flex;
+}
+
+li{
+	list-style-type:none;
+	width:100%;
+}
+
+ul li a{
+	transition: all 0.5s ease-in;
+	text-align:center;
+	font-size:1.5em;
+	height:100%;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+#compte{
+	background-color:#000;
+}
+
+#compte li{
+	padding: 0.5% 1% 0.5% 1%;
+	height:2.5em;
+}
+
+#compte li:first-of-type{
+	border-right: 0.1px ridge dimgrey;
+}
+
+#compte li a{
+	color:#b5b5b5;
+}
+
+#compte li a:hover{
+	color:#ffffff;
+}
+
+header img{
+	width:100%;
+}
+
+#navigation{
+	background-color:#003f5e;
+	box-shadow: 0 0 2em #888888;
+}
+
+#navigation li{
+	padding: 1% 2% 1% 2%;
+	height:3.5em;
+	border: 0.1em solid #002a3e;
+}
+
+#navigation li a{
+	color:#ffffff;
+}
+
+#navigation li a:hover{
+	color:#00a9d0;
+}
+
+main{
+	background-color:#003f5e;
+	padding:3% 0 3% 0;
+	border: 0.1em solid #002a3e;
+}
+
+footer{
+	border: 0.1em solid #002a3e;
+	padding: 2% 0 1% 0;
+}
+
+#propriete{
+	color:#888888;
+	font-size:1.5em;
+	text-align:center;
+	padding: 1% 0.5% 1% 0.5%;
+	text-shadow: 0.1em 0.1em 0.5em black;
+	/*border-radius:5em;*/
+	margin-bottom:3%;
+}
+
+#propriete a{
+	font-weight: bold;
+	font-size:x-large;
+}
+
+#logo{
+	text-align:center;
+}
+
+#logo img{
+	vertical-align:middle;
+	padding:0 5% 0 5%;
+	width:10%;
+}
+
+@media (max-width:500px){
+	#navigation{
+		font-size:12px;
+	}
+	h1.titre{
+		font-size:20px;
+	}
+}
+
+.titre{
+	text-align:center;
+	color:white;
+	font-size:xx-large;
+	border : red 0.25em dotted;
+	padding: 2% 4% 2% 4%;
+	width:50%;
+	margin:auto;
+	margin-top:1.5%;
+	margin-bottom:5%;
+}
+
+.avatar{
+	width:35px;
+	height:35px;
+	margin: 0 10px 0 10px;
+}
+
+#feedback{
+	text-align:center;
+	background-color:gainsboro;
+	color:red;
+	padding: 1%;
+	font-size: 1.2em;
+	border: 2px inset black;
+}
+
+article#privatehome{
+	line-height: 3em;
+	text-align:center;
+}
+
+/************************ Accueil ************************/
+
+blockquote{
+	font-family: "SF Comic Script Condensed", serif;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;	
+	color:black;
+	font-size:1.3em;
+	letter-spacing : 0.08em;	
+	text-align:center;
+	width:calc(70em/2);
+	margin:auto;
+	margin-bottom:3%;
+	/*text-decoration: underline;
+	text-decoration-color: red;*/
+	padding: 2% 4% 2% 4%;
+	border:0.4em #888888 groove;
+	background-image:url('../img/blockquote_bg.jpg');
+	background-size: 100% 100%;
+	height:7em;
+}
+
+/************************** QG **************************/
+
+#listeHeros{
+	border:none;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-content: center;
+ 	align-items: center;
+}
+
+.hero{
+	border: .2em black ridge;
+	background-color: #215ca3; 
+	box-sizing: border-box;
+	flex:0 0.5 250px;
+	margin-bottom:4em;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.nomHeros{
+	font-size:1.5em;
+	color:black;
+	height:15%;
+	padding:2%;
+	background-color: #C0C0C0;
+	border-bottom: 0.2em solid white;
+	transition: border-color 2s, background-color 4s;
+}
+
+.nomHeros:hover{
+	background-color:#F0FFFF;
+}
+
+.hero a:nth-of-type(2){
+	height:75%;
+	margin:1.1em;
+}
+
+.hero img{
+	border: 3px solid black;
+	border-radius: 50%;
+	transition: border-color 1s, background-color 3s;
+	width:160px;
+	height:160px;
+}
+
+.hero img:hover{
+	box-shadow: inset 0 0 40% #045487;
+}
+
+.marvel:hover{
+	border-color:#ea0003;
+}
+
+.dc:hover{
+	border-color:deepskyblue;
+}
+
+.nomHeros.dc:hover{
+	border-color:#003f5e;
+}
+
+.hidden a{
+	height:auto;
+	font-style:2em;
+	margin:30px;
+	margin-bottom:20px;
+	color:white;
+}
+
+.hidden{
+	transition: all 2s;
+	border: 3px solid black;
+	border-radius: 50%;
+	display:none;
+	width:160px;
+	height:160px;
+	margin:auto;
+	margin-bottom:11.3%;
+	margin-top:11.3%;
+	text-align:center;
+	background-color:#C0C0C0;
+}
+
+.hidden a[href]{
+	font-size:1em;
+	height:auto;
+}
+
+.hidden:hover{
+	background-color:#F0FFFF;
+}
+
+
+/************************** Page héros **************************/
+
+#herocontainer{
+	background-color : #FFF48D;
+	padding: 5%;
+	border: 2px outset grey;
+	border-radius:7%;
+	text-align:center;
+}
+
+#tete{
+	margin: 30px 0 30px 0;
+}
+
+#tete img{
+	border: 2px solid black;
+	border-radius: 10%;
+	width:160px;
+	height:160px;
+}
+
+#tete p{
+	float:right;
+	margin-top: 65px;
+	margin-right:160px;
+	font-size: 1.7em;
+}
+
+#herodesc{
+	line-height: 2em;
+	margin-bottom: 15px;
+}
+
+#herodesc p:first-of-type{
+	font-style: italic;
+	font-size: 1em;
+	line-height: 1.5em;
+	text-align:left;
+}
+
+#heroprofil a{
+	margin-top: 30px;
+}
+
+#allows{
+	margin-top:35px;
+}
+
+#allows a{
+	margin: 30px;
+}
+
+
+/************************** A Propos **************************/
+
+.apropos{
+	line-height:1.6em;
+	padding: 5% 10% 5% 10%;
+	margin-bottom: 30px;
+}
+
+.apropos a{
+	color:#FCDC12;
+}
+
+.apropos a:hover{
+	color:white;
+	text-decoration:underline;
+}
+
+caption{
+	height: 40px;
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+
+th, td{
+	width: 50%;
+}
+
+th{
+	height: 50px;
+	font-size: 1.25em;
+}
+
+td{
+	height: 30px;
+	vertical-align:middle;
+}
+
+table{
+	text-align:center;
+	width: 65%;
+	margin: 0 0 30px 0;
+	border-collapse: collapse;
+	background-color: #1560BD;
+}
+
+table, th {
+   	border: 2px inset black;
+	vertical-align:middle;
+} 
+
+table a{
+	color: black;
+}
+
+table a:hover{
+	color: #582900;
+	text-decoration: underline;
+}
+
+#notabene{
+	background-color : white;
+	padding: 10px;
+	border: 2px outset grey;
+}
+/************************** Inscription et Connexion et Nouveau héros**************************/
+
+form, article{
+	display:flex;
+	flex-direction:column;
+	min-width:300px;
+	width:70%;
+	margin:auto;
+	padding:3%;
+	align-items:center;
+	background-color:#215ca3;
+	font-size:1.2em;
+	border: 2px dashed #000;
+    box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+	border-radius: 20%/7%;
+}
+
+input,textarea{
+	text-align:center;
+	margin:10px 0 20px 0;
+	padding:5px;
+	border: 0;
+	border-radius:6px;
+	box-shadow: -5px 5px 0 #222;
+	width:25%;
+	transition: padding 0.3s linear;
+}
+
+select{
+	text-align:center;
+	margin:10px 0 20px 0;
+	border: 0;
+	border-radius:6px;
+	box-shadow: -5px 5px 0 #222;
+}
+
+option{
+	padding:8%;
+	background-size:17%;
+	background-repeat: no-repeat;
+	background-position: 10% 50%;
+	padding-left:30%;
+	border-bottom: 1px solid #000;
+}
+
+input:focus,textarea:focus{
+	padding: 10px;
+}
+
+textarea{
+	width:auto;
+	height:auto;
+}
+
+form button, .button{
+	background-color:red;
+	border: 2px solid red;
+	padding: 10px 18px 10px 18px;
+	margin-top:15px;
+	border-radius: 8px;
+	transition: all 0.3s ease-out;
+	color: white;
+	font-family: "SF Comic Script";
+	font-size:1.1em;
+}
+
+
+form button:hover, .button:hover{
+	background-color: white;
+	color: red;
+	transition: all 0.3s ease-in;
+	cursor:pointer;
+}
+
+
+/************************** Profil utilisateur **************************/
+
+#profiluser{
+	line-height: 2em;
+}
+
+#profiluser a.profiluserheroes{
+	color:black;
+	height:15%;
+	padding:2%;
+	background-color: #C0C0C0;
+	border-bottom: 0.2em solid #003f5e;
+	transition: border-color 2s, background-color 4s;
+	border-radius: 50%;
+}
+
+#profiluser a.profiluserheroes:hover{
+	border-color:white;
+	background-color: white;
+}	
+
+
+/**************************** Page Not Found ****************************/
+
+img#galerie{
+	width:100%;
+}
