@@ -15,3 +15,9 @@ require_once('???/mysql_config.php');
 ```
 
 There is also an available SQL dump *dumpDB.sql* of an existing database.
+
+
+**Passwords are encrypted for more security, by using the simplified password hashing API:**
+ * @author Anthony Ferrara <ircmaxell@php.net>
+ * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ * @copyright 2012
